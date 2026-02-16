@@ -1,15 +1,14 @@
-/* 1. GENERAL PAGE STYLING */
+
 body {
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.7;
     color: #4a4a4a;
-    background-color: #ffffff; /* Warm cream background */
+    background-color: #ffffff;
     max-width: 850px;
     margin: 50px auto;
     padding: 30px;
 }
 
-/* 2. TYPOGRAPHY & HEADERS */
 h1 {
     color: #3d3d3d;
     font-size: 2.5rem;
@@ -35,7 +34,7 @@ hr {
     margin: 30px 0;
 }
 
-/* 3. HOME PAGE SPECIFIC: PROFILE PHOTO WITH GLOW EFFECT */
+
 img[alt="My Photo"] {
     float: right;
     margin-left: 30px;
@@ -44,22 +43,20 @@ img[alt="My Photo"] {
     background: #ffffff;
     padding: 10px; 
     border: 1px solid #e0dcd5;
-    /* Default subtle shadow */
+
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    /* This makes the glow appear smoothly */
+
     transition: all 0.4s ease-in-out;
     cursor: pointer;
 }
 
 img[alt="My Photo"]:hover {
-    transform: scale(1.02); /* Very slight zoom */
-    border-color: #8c7b6c; /* Border changes to warm brown */
-    /* This creates the warm glow effect */
+    transform: scale(1.02); 
+    border-color: #8c7b6c; 
     box-shadow: 0 0 20px rgba(140, 123, 108, 0.4), 0 0 40px rgba(140, 123, 108, 0.2);
 }
 
-/* Fix for the Education/Contact icons on Home Page */
-/* Navigation Icons */
+
 h2 + a img, 
 a img {
     transition: all 0.3s ease;
@@ -75,7 +72,7 @@ a img:hover {
     border-color: #8c7b6c;
 }
 
-/* Clearfix for the floating image */
+
 body::after {
     content: "";
     clear: both;
@@ -83,7 +80,7 @@ body::after {
 }
 
 
-/* 5. TABLES & LISTS */
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -103,7 +100,7 @@ td {
     border-bottom: 1px solid #f0efeb;
 }
 
-/* 6. CONTACT FORM */
+
 .contact-form, form {
     display: flex;
     flex-direction: column;
@@ -137,7 +134,6 @@ input[type="submit"]:hover {
     background-color: #8c7b6c;
 }
 
-/* 7. SOCIAL LINKS */
 .social-links {
     display: flex;
     gap: 20px;
@@ -153,8 +149,7 @@ input[type="submit"]:hover {
     transform: translateY(-5px);
 }
 
-/* 8. THE MODERN HOME BUTTON (The "Back to Home" Link) */
-/* This targets the <a> link specifically */
+
 a[href="index.html"] {
     display: inline-flex;
     align-items: center;
@@ -172,12 +167,40 @@ a[href="index.html"] {
 
 a[href="index.html"]:hover {
     background-color: #8c7b6c;
-    transform: translateX(-5px); /* Moves slightly left like a back button */
+    transform: translateX(-5px);
 }
 
-/* 9. CLEARFIX UTILITY */
+
 body::after {
     content: "";
     clear: both;
     display: table;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 16px;
+    }
+
+    a {
+        margin-right: 12px;
+        font-size: 0.9rem;
+    }
+
+    table, form {
+        width: 100%;
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
 }
